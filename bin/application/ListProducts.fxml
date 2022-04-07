@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListProductsController">
+   <center>
+      <AnchorPane prefHeight="413.0" prefWidth="721.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tbl" layoutX="57.0" layoutY="39.0" prefHeight="336.0" prefWidth="608.0">
+              <columns>
+                <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                <TableColumn fx:id="prix" prefWidth="75.0" text="Prix" />
+                  <TableColumn fx:id="qte" prefWidth="75.0" text="Quantité" />
+                  <TableColumn fx:id="pays" prefWidth="75.0" text="Pays" />
+                  <TableColumn fx:id="date" prefWidth="124.0" text="Date Fabrication" />
+                  <TableColumn fx:id="remarques" prefWidth="183.0" text="Remarques" />
+              </columns>
+            </TableView>
+            <Label layoutX="245.0" text="Liste de Produits">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnBack" layoutX="9.0" layoutY="379.0" mnemonicParsing="false" onAction="#handleButtonBackAction" text="Back" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
