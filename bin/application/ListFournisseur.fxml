@@ -6,63 +6,59 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListFournisseursController">
+<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListFournisseurController">
    <center>
-      <AnchorPane prefHeight="414.0" prefWidth="707.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="344.0" prefWidth="707.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tblFournisseurs" layoutX="24.0" layoutY="129.0" prefHeight="200.0" prefWidth="653.0">
+            <TableView fx:id="tblFournisseurs" layoutY="70.0" prefHeight="290.0" prefWidth="707.0">
               <columns>
-                <TableColumn fx:id="nomF" prefWidth="75.0" text="Nom" />
-                <TableColumn fx:id="adresseF" prefWidth="75.0" text="Adresse" />
-                  <TableColumn fx:id="telF" prefWidth="115" text="Tel" />
-                  <TableColumn fx:id="emailF" prefWidth="235" text="Email" />
+                <TableColumn fx:id="nomF" prefWidth="128.0" text="Nom" />
+                <TableColumn fx:id="adresseF" prefWidth="142.0" text="Adresse" />
+                  <TableColumn fx:id="telF" prefWidth="146.0" text="Télephone" />
+                  <TableColumn fx:id="emailF" prefWidth="236.0" text="Email" />
               </columns>
             </TableView>
-            <MenuBar layoutX="24.0" layoutY="36.0" prefHeight="26.0" prefWidth="350.0">
-               <menus>
-                  <Menu mnemonicParsing="false" text="Produits">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionProduits" text="Liste Produits" />
-                        
-<!--                         <MenuItem mnemonicParsing="false"  text="Ajouter produit" /> -->
-                        <MenuItem mnemonicParsing="false" text="Ajouter produit" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Fournisseurs">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Liste Fournisseurs" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Ajouter Fournisseur" />
-                     </items></Menu>
-                  <Menu mnemonicParsing="false" text="Finance">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="En construction" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="A propos">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionAbout" text="About ISIKA" />
-                    </items>
-                  </Menu>
-               </menus>
-            </MenuBar>
-            <Label layoutX="288.0" layoutY="355.0" text="Copyright @ISIKA 2022" textFill="WHITE" />
-            <ImageView fitHeight="64.0" fitWidth="94.0" layoutX="24.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../logo.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="252.0" layoutY="77.0" prefHeight="17.0" prefWidth="158.0" text="Liste des Fournisseurs" textFill="WHITE" />
-            <Label layoutX="24.0" layoutY="6.0" prefHeight="17.0" prefWidth="455.0" text="Gestion de fournisseurs" textFill="WHITE">
+            <Label layoutX="243.0" layoutY="36.0" prefHeight="27.0" prefWidth="221.0" text="Liste des Fournisseurs" textFill="#111010" underline="true">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Georgia Bold" size="18.0" />
                </font></Label>
          </children>
       </AnchorPane>
    </center>
+   <top>
+      <MenuBar prefHeight="26.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Produits">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionProduits" text="Liste Produits" />
+                  
+<!--                         <MenuItem mnemonicParsing="false"  text="Ajouter produit" /> -->
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionProduits" text="Ajouter produit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Fournisseurs">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Ajouter Fournisseur" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Finance">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="En construction" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="A propos">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionAbout" text="About ISIKA" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label styleClass="styleTitle" text="CopyRight reserved @ISIKA 2022" textFill="WHITE" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

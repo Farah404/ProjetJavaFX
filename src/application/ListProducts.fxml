@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -7,12 +8,13 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListProduitsController">
    <center>
       <AnchorPane prefHeight="314.0" prefWidth="707.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tblProduits" layoutX="26.0" layoutY="64.0" prefHeight="200.0" prefWidth="653.0">
+            <TableView fx:id="tblProduits" layoutY="39.0" prefHeight="276.0" prefWidth="707.0">
               <columns>
                 <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
                 <TableColumn fx:id="prix" prefWidth="75.0" text="Prix" />
@@ -22,32 +24,43 @@
                   <TableColumn fx:id="remarque" prefWidth="235" text="Consignes" />
               </columns>
             </TableView>
-            <MenuBar prefHeight="26.0" prefWidth="350.0">
-               <menus>
-                  <Menu mnemonicParsing="false" text="Produits">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Liste Produits" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddAction" text="Ajouter produit" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Fournisseurs">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Liste Fournisseurs" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionAjouterFournisseur" text="Ajouter Fournisseur" />
-                     </items></Menu>
-                  <Menu mnemonicParsing="false" text="Finance">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="About" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="A propos">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                  </Menu>
-               </menus>
-            </MenuBar>
+            <Label layoutX="270.0" layoutY="14.0" text="Liste des Produits" underline="true">
+               <font>
+                  <Font name="Georgia Bold" size="18.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </center>
+   <top>
+      <MenuBar prefHeight="26.0" prefWidth="350.0" styleClass="styleTitle" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="Produits">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Liste Produits" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddAction" text="Ajouter produit" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Fournisseurs">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Liste Fournisseurs" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionAjouterFournisseur" text="Ajouter Fournisseur" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Finance">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="About" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="A propos">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label styleClass="styleTitle" text="CopyRight reserved @ISIKA 2022" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

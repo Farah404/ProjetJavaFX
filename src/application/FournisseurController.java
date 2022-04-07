@@ -59,8 +59,8 @@ public class FournisseurController {
 	private void handleMenuListActionProduits(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) btnAddFo.getScene().getWindow();
-		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("ListProduits.fxml"));
-		Scene sceneList = new Scene(layoutAddProduct,700,400);
+		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("ListProducts.fxml"));
+		Scene sceneList = new Scene(layoutAddProduct,640,380);
 		sceneList.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList);
 		
@@ -70,8 +70,8 @@ public class FournisseurController {
 	private void handleMenuListActionFournisseur(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) btnAddFo.getScene().getWindow();
-		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("ListFournisseurs.fxml"));
-		Scene sceneList = new Scene(layoutAddProduct,700,400);
+		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("ListFournisseur.fxml"));
+		Scene sceneList = new Scene(layoutAddProduct,640,400);
 		sceneList.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList);
 		

@@ -1,6 +1,13 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-.stylebtnLogOut{
--fx-background-color: red;
+.stylebtnAjouter{
+-fx-background-color: green;
+-fx-text-fill:black;
+-fx-font-size: 15px;
+-fx-font-weight: bold;
+}
+
+.stylebtnLogout{
+-fx-background-color:BlanchedAlmond;
 -fx-text-fill:black;
 -fx-font-size: 15px;
 -fx-font-weight: bold;
@@ -23,14 +30,14 @@
 
 .stylebackground{
 
--fx-background-color: green;
+-fx-background-color: Lavender;
 -fx-text-fill:white;
 }
 
 
 .styleTitle{
 -fx-font-family: "Lucida Console","Courier New", sans-serif;
--fx-text-fill:white;
+-fx-text-fill:black;
 -fx-font-weight: bold;
 }
 

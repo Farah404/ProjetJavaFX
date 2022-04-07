@@ -55,6 +55,9 @@ public class SampleController {
 	private TextArea remarques;
 	
 	@FXML
+	private Button btnlogOut;
+	
+	@FXML
 	private void handleButtonAjoutAction(ActionEvent e)
 	{
 		
@@ -104,8 +107,8 @@ public class SampleController {
 	private void handleMenuListAction(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) btnAdd.getScene().getWindow();
-		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("ListProduits.fxml"));
-		Scene sceneList = new Scene(layoutAddProduct,700,400);
+		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("ListProducts.fxml"));
+		Scene sceneList = new Scene(layoutAddProduct,640,380);
 		sceneList.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList);
 		
@@ -115,8 +118,8 @@ public class SampleController {
 	private void handleMenuAddActionAjouterFournisseur(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) btnAdd.getScene().getWindow();
-		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("AjoutFournisseur.fxml"));
-		Scene sceneList2 = new Scene(layoutAddProduct2,380,500);
+		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("Fournisseurs.fxml"));
+		Scene sceneList2 = new Scene(layoutAddProduct2,340,500);
 		sceneList2.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList2);
 		
@@ -125,8 +128,8 @@ public class SampleController {
 	private void handleMenuAddActionFournisseur(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) btnAdd.getScene().getWindow();
-		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("ListFournisseurs.fxml"));
-		Scene sceneList2 = new Scene(layoutAddProduct2,380,500);
+		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("ListFournisseur.fxml"));
+		Scene sceneList2 = new Scene(layoutAddProduct2,640,400);
 		sceneList2.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList2);
 		
@@ -159,4 +162,13 @@ public class SampleController {
 		alert.showAndWait();
 		
 	}
+	@FXML
+	private void handleLogOutAction(ActionEvent e) throws IOException
+	{
+		Stage primaryStage = (Stage) btnAdd.getScene().getWindow();
+		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("Login.fxml"));
+		Scene sceneList = new Scene(layoutAddProduct,280,400);
+		sceneList.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+		primaryStage.setScene(sceneList);
+}
 }

@@ -29,14 +29,14 @@ public class Main extends Application {
 			//BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("ListProduits.fxml"));
 			//Scene scene = new Scene(root,700,400);
 			
-			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Login.fxml"));
-			Scene scene = new Scene(root,380,500);
+			BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("login.fxml"));
+			Scene scene = new Scene(root,280,400);
 			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			primaryStage.setTitle("Gestion de Pharmacie par ISIKA");
-			primaryStage.getIcons().add(new Image("C:\\logo.png"));
+			primaryStage.getIcons().add(new Image("C:\\Users\\farah\\Desktop\\Pharmacie-logo.png"));
 		} catch(Exception e) {
 			e.printStackTrace();
 			System.out.println("Oups un problème");

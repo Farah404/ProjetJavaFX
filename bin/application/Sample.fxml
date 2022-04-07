@@ -10,44 +10,74 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
-   <bottom>
-      <AnchorPane prefHeight="511.0" prefWidth="350.0" styleClass="stylebackground" stylesheets="@application.css" BorderPane.alignment="CENTER">
+   <top>
+      <MenuBar prefHeight="26.0" prefWidth="350.0" styleClass="styleTitle" stylesheets="@application.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Produits">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuListAction" text="Liste Produits" />
+                  <MenuItem mnemonicParsing="false" text="Ajouter produit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Fournisseurs">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Liste Fournisseurs" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionAjouterFournisseur" text="Ajouter Fournisseurs" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Finance">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="A propos">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <AnchorPane prefHeight="660.0" prefWidth="442.0" styleClass="stylebackground" stylesheets="@application.css" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="nomProduit" layoutX="164.0" layoutY="75.0" />
-            <Label layoutX="24.0" layoutY="126.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Prix">
+            <TextField fx:id="nomProduit" layoutX="180.0" layoutY="239.0" prefHeight="25.0" prefWidth="240.0" />
+            <Label layoutX="20.0" layoutY="279.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Prix">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="24.0" layoutY="174.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Quantité">
+            <Label layoutX="20.0" layoutY="319.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Quantité">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="prixProduit" layoutX="164.0" layoutY="123.0" />
-            <TextField fx:id="qteProduit" layoutX="164.0" layoutY="171.0" />
-            <Label layoutX="13.0" layoutY="222.0" prefHeight="18.0" prefWidth="138.0" styleClass="styleLabel" text="Pays fabrication">
+            <TextField fx:id="prixProduit" layoutX="180.0" layoutY="279.0" prefWidth="240.0" />
+            <TextField fx:id="qteProduit" layoutX="180.0" layoutY="319.0" prefWidth="240.0" />
+            <Label layoutX="20.0" layoutY="359.0" prefHeight="18.0" prefWidth="138.0" styleClass="styleLabel" text="Pays fabrication">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font></Label>
-            <Label layoutX="14.0" layoutY="271.0" prefHeight="18.0" prefWidth="136.0" styleClass="styleLabel" text="Date fabrication">
+            <Label layoutX="20.0" layoutY="399.0" prefHeight="18.0" prefWidth="136.0" styleClass="styleLabel" text="Date fabrication">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font></Label>
-            <Label layoutX="24.0" layoutY="325.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Remarque">
+            <Label layoutX="20.0" layoutY="439.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Remarque">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font></Label>
-            <Button fx:id="btnAdd" layoutX="129.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleButtonAjoutAction" prefHeight="34.0" prefWidth="92.0" text="Ajouter">
+            <Button fx:id="btnAdd" layoutX="180.0" layoutY="581.0" mnemonicParsing="false" onAction="#handleButtonAjoutAction" prefHeight="34.0" prefWidth="240.0" styleClass="stylebtnAjouter" stylesheets="@application.css" text="Ajouter">
                <font>
                   <Font name="Georgia Bold Italic" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="france" layoutX="175.0" layoutY="222.0" mnemonicParsing="false" selected="true" styleClass="styleLabel" text="France">
+            <RadioButton fx:id="france" layoutX="180.0" layoutY="359.0" mnemonicParsing="false" selected="true" styleClass="styleLabel" text="France">
                <toggleGroup>
                   <ToggleGroup fx:id="ab" />
                </toggleGroup>
@@ -55,48 +85,32 @@
                   <Font name="Georgia Bold Italic" size="12.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="autre" layoutX="262.0" layoutY="222.0" mnemonicParsing="false" styleClass="styleLabel" text="Autre" toggleGroup="$ab">
+            <RadioButton fx:id="autre" layoutX="262.0" layoutY="359.0" mnemonicParsing="false" styleClass="styleLabel" text="Autre" toggleGroup="$ab">
                <font>
                   <Font name="Georgia Bold Italic" size="12.0" />
                </font></RadioButton>
-            <DatePicker fx:id="dateFabrication" layoutX="152.0" layoutY="268.0" />
-            <TextArea fx:id="remarques" layoutX="150.0" layoutY="316.0" prefHeight="122.0" prefWidth="172.0" />
-            <Label layoutX="24.0" layoutY="36.0" styleClass="styleLabel" text="Formulaire d'ajout d'un produit">
+            <DatePicker fx:id="dateFabrication" layoutX="180.0" layoutY="399.0" prefWidth="240.0" />
+            <TextArea fx:id="remarques" layoutX="180.0" layoutY="439.0" prefHeight="122.0" prefWidth="240.0" />
+            <Label layoutX="70.0" layoutY="198.0" styleClass="styleLabel" text="Formulaire d'ajout d'un produit" underline="true">
                <font>
                   <Font name="Georgia Bold Italic" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="24.0" layoutY="78.0" styleClass="styleLabel" text="Nom du produit">
+            <Label layoutX="20.0" layoutY="239.0" styleClass="styleLabel" text="Nom du produit">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font>
             </Label>
-            <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="350.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="Produits">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleMenuListAction" text="Liste Produits" />
-                        <MenuItem mnemonicParsing="false" text="Ajouter produit" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Fournisseurs">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Liste Fournisseurs" />
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionAjouterFournisseur" text="Ajouter Fournisseurs" />
-                     </items></Menu>
-                <Menu mnemonicParsing="false" text="Finance">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="About" />
-                  </items>
-                </Menu>
-                  <Menu mnemonicParsing="false" text="A propos">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Action 1" />
-                    </items>
-                  </Menu>
-              </menus>
-            </MenuBar>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="128.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/Pharmacie-logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnlogOut" layoutX="252.0" layoutY="620.0" mnemonicParsing="false" onAction="#handleLogOutAction" styleClass="stylebtnLogout" text="Log Out" />
          </children>
       </AnchorPane>
+   </left>
+   <bottom>
+      <Label styleClass="styleTitle" stylesheets="@application.css" text="CopyRight reserved @ISIKA 2022" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>

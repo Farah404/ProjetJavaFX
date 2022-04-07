@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,81 +13,88 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AjoutFournisseurController">
+<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FournisseurController">
    <left>
-      <AnchorPane prefHeight="511.0" prefWidth="350.0" styleClass="stylebackground" stylesheets="@application.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="350.0" styleClass="stylebackground" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="nomF" layoutX="164.0" layoutY="114.0" />
-            <Label layoutX="24.0" layoutY="166.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Adresse">
+            <TextField fx:id="nomF" layoutX="164.0" layoutY="190.0" />
+            <Label layoutX="10.0" layoutY="242.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Adresse">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font>
             </Label>
-            <Label layoutX="24.0" layoutY="219.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Téléphone">
+            <Label layoutX="10.0" layoutY="295.0" prefHeight="18.0" prefWidth="98.0" styleClass="styleLabel" text="Téléphone">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="adresseF" layoutX="164.0" layoutY="162.0" />
-            <TextField fx:id="telF" layoutX="163.0" layoutY="215.0" />
-            <Label layoutX="24.0" layoutY="269.0" prefHeight="18.0" prefWidth="136.0" styleClass="styleLabel" text="Email">
+            <TextField fx:id="adresseF" layoutX="164.0" layoutY="238.0" />
+            <TextField fx:id="telF" layoutX="163.0" layoutY="291.0" stylesheets="@application.css" />
+            <Label layoutX="10.0" layoutY="345.0" prefHeight="18.0" prefWidth="136.0" styleClass="styleLabel" text="Email">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font></Label>
-            <Button fx:id="btnAddFo" layoutX="129.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleButtonAjoutAction" prefHeight="34.0" prefWidth="92.0" text="Ajouter">
+            <Button fx:id="btnAddFo" layoutX="193.0" layoutY="398.0" mnemonicParsing="false" onAction="#handleButtonAjoutAction" prefHeight="34.0" prefWidth="92.0" styleClass="stylebtnAjouter" text="Ajouter">
                <font>
                   <Font name="Georgia Bold Italic" size="12.0" />
                </font></Button>
-            <Label layoutX="73.0" layoutY="72.0" styleClass="styleLabel" text="Formulaire ajout nouveau Fournisseur">
+            <Label layoutX="35.0" layoutY="151.0" styleClass="styleTitle" text="Formulaire ajout nouveau Fournisseur">
                <font>
                   <Font name="Georgia Bold Italic" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="19.0" layoutY="118.0" styleClass="styleLabel" text="Nom du fournisseur">
+            <Label layoutX="10.0" layoutY="194.0" styleClass="styleLabel" text="Nom du fournisseur">
                <font>
                   <Font name="Georgia Bold Italic" size="14.0" />
                </font>
             </Label>
-            <MenuBar layoutY="35.0" prefHeight="26.0" prefWidth="350.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="Produits">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionProduits" text="Liste Produits" />
-                        <MenuItem mnemonicParsing="false" text="Ajouter produit" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Fournisseurs">
-                     <items>
-                        <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFournisseur" text="Liste Fournisseurs" />
-                        <MenuItem mnemonicParsing="false" text="Ajouter Fournisseur" />
-                     </items></Menu>
-                  <Menu mnemonicParsing="false" text="Finance">
-                    <items>
-                      <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="Voir plus" />
-                    </items>
-                  </Menu>
-                <Menu mnemonicParsing="false" text="A propos">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionAbout" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <TextField fx:id="emailF" layoutX="163.0" layoutY="265.0" />
-            <Label layoutX="113.0" layoutY="469.0" text="Copyright @ISIKA 2022" />
-            <ImageView fitHeight="60.0" fitWidth="75.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="emailF" layoutX="163.0" layoutY="341.0" />
+            <ImageView fitHeight="94.0" fitWidth="172.0" layoutX="109.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../logo.png" />
+                  <Image url="@../../../../../Desktop/Pharmacie-logo.png" />
                </image>
             </ImageView>
-            <Label layoutX="1.0" text="Gestion de Fournisseurs" textFill="WHITE">
+            <Label layoutX="78.0" layoutY="119.0" styleClass="styleTitle" text="Gestion de Fournisseurs" textFill="WHITE">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Separator layoutY="22.0" prefWidth="380.0" />
-            <Separator layoutX="-27.0" layoutY="466.0" prefWidth="380.0" />
          </children>
+         <stylesheets>
+            <URL value="@application.css" />
+            <URL value="@application.css" />
+         </stylesheets>
       </AnchorPane>
    </left>
+   <top>
+      <MenuBar prefHeight="26.0" prefWidth="350.0" styleClass="styleTitle" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Produits">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionProduits" text="Liste Produits" />
+                  <MenuItem mnemonicParsing="false" text="Ajouter produit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Fournisseurs">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFournisseur" text="Liste Fournisseurs" />
+                  <MenuItem mnemonicParsing="false" text="Ajouter Fournisseur" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Finance">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="Voir plus" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="A propos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <Label prefHeight="27.0" prefWidth="249.0" styleClass="styleTitle" text="CopyRight reserved @ISIKA 2022" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

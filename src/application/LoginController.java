@@ -47,7 +47,7 @@ public class LoginController {
 			
 			Stage primaryStage = (Stage) btnlogin.getScene().getWindow();
 			BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
-			Scene sceneAdd = new Scene(layoutAddProduct,700,400);
+			Scene sceneAdd = new Scene(layoutAddProduct,440,700);
 			primaryStage.setScene(sceneAdd);
 		     
 		}

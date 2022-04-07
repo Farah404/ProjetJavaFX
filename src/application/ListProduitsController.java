@@ -64,7 +64,7 @@ public class ListProduitsController  implements Initializable{
 	{
 		Stage primaryStage = (Stage) tblProduits.getScene().getWindow();
 		BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
-		Scene sceneList = new Scene(layoutAddProduct,380,500);
+		Scene sceneList = new Scene(layoutAddProduct,500,700);
 		sceneList.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList);
 		
@@ -74,8 +74,8 @@ public class ListProduitsController  implements Initializable{
 	private void handleMenuAddActionFournisseur(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) tblProduits.getScene().getWindow();
-		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("ListFournisseurs.fxml"));
-		Scene sceneList2 = new Scene(layoutAddProduct2,380,500);
+		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("ListFournisseur.fxml"));
+		Scene sceneList2 = new Scene(layoutAddProduct2,640,400);
 		sceneList2.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList2);
 		
@@ -85,8 +85,8 @@ public class ListProduitsController  implements Initializable{
 	private void handleMenuAddActionAjouterFournisseur(ActionEvent e) throws IOException
 	{
 		Stage primaryStage = (Stage) tblProduits.getScene().getWindow();
-		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("AjoutFournisseur.fxml"));
-		Scene sceneList2 = new Scene(layoutAddProduct2,380,500);
+		BorderPane layoutAddProduct2 = (BorderPane)FXMLLoader.load(getClass().getResource("Fournisseurs.fxml"));
+		Scene sceneList2 = new Scene(layoutAddProduct2,340,500);
 		sceneList2.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		primaryStage.setScene(sceneList2);
 		
