@@ -27,7 +27,7 @@ public class LoginController {
 	
 	@FXML
 	private Button btnlogin;
-
+	
 	@FXML
 	private void handleButtonLoginAction(ActionEvent e) throws IOException
 	{
@@ -47,7 +47,7 @@ public class LoginController {
 			
 			Stage primaryStage = (Stage) btnlogin.getScene().getWindow();
 			BorderPane layoutAddProduct = (BorderPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
-			Scene sceneAdd = new Scene(layoutAddProduct,400,500);
+			Scene sceneAdd = new Scene(layoutAddProduct,700,400);
 			primaryStage.setScene(sceneAdd);
 		     
 		}

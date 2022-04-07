@@ -1,9 +1,9 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
-
-.btnLogOut{
+.stylebtnLogOut{
 -fx-background-color: red;
--fx-text-fill:white;
--fx-font-size: 18px
+-fx-text-fill:black;
+-fx-font-size: 15px;
+-fx-font-weight: bold;
 }
 
 .styleLabelL1{
@@ -28,6 +28,15 @@
 }
 
 
-.styleLabel{
+.styleTitle{
+-fx-font-family: "Lucida Console","Courier New", sans-serif;
 -fx-text-fill:white;
+-fx-font-weight: bold;
+}
+
+
+.styleLable{
+-fx-font-family: "Times New Roman", Times, serif;
+-fx-text-fill:white;
+-fx-font-weight: bold;
 }

@@ -1,33 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.text.Font?>
 
-<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListProductsController">
+<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListProduitsController">
    <center>
-      <AnchorPane prefHeight="413.0" prefWidth="721.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="314.0" prefWidth="707.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tbl" layoutX="57.0" layoutY="39.0" prefHeight="336.0" prefWidth="608.0">
+            <TableView fx:id="tblProduits" layoutX="26.0" layoutY="64.0" prefHeight="200.0" prefWidth="653.0">
               <columns>
                 <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
                 <TableColumn fx:id="prix" prefWidth="75.0" text="Prix" />
                   <TableColumn fx:id="qte" prefWidth="75.0" text="Quantité" />
                   <TableColumn fx:id="pays" prefWidth="75.0" text="Pays" />
-                  <TableColumn fx:id="date" prefWidth="124.0" text="Date Fabrication" />
-                  <TableColumn fx:id="remarques" prefWidth="183.0" text="Remarques" />
+                  <TableColumn fx:id="date" prefWidth="115" text="Date Fabrication" />
+                  <TableColumn fx:id="remarque" prefWidth="235" text="Consignes" />
               </columns>
             </TableView>
-            <Label layoutX="245.0" text="Liste de Produits">
-               <font>
-                  <Font name="Arial Black" size="25.0" />
-               </font>
-            </Label>
-            <Button fx:id="btnBack" layoutX="9.0" layoutY="379.0" mnemonicParsing="false" onAction="#handleButtonBackAction" text="Back" />
+            <MenuBar prefHeight="26.0" prefWidth="350.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Produits">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Liste Produits" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddAction" text="Ajouter produit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Fournisseurs">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionFournisseur" text="Liste Fournisseurs" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddActionAjouterFournisseur" text="Ajouter Fournisseur" />
+                     </items></Menu>
+                  <Menu mnemonicParsing="false" text="Finance">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuListActionFinance" text="About" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="A propos">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
          </children>
       </AnchorPane>
    </center>

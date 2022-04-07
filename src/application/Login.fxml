@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
    <center>
-      <AnchorPane prefHeight="493.0" prefWidth="350.0" styleClass="stylebackground" stylesheets="@application.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="204.0" prefWidth="263.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="btnlogin" layoutX="89.0" layoutY="160.0" mnemonicParsing="false" onAction="#handleButtonLoginAction" text="Connexion">
                <font>
